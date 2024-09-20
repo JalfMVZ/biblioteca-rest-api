@@ -6,6 +6,7 @@ import authRoutes from './routes/authRoutes';
 import bookRoutes from './routes/bookRoutes';
 import loanRoutes from './routes/loanRoutes';
 import purchaseRoutes from './routes/purchaseRoutes';
+import swaggerUi from 'swagger-ui-express';
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ app.use('/', authRoutes);
 app.use('/', bookRoutes);
 app.use('/', loanRoutes);
 app.use('/', purchaseRoutes);
+
+
 
 pool.query('SELECT NOW()', (err, result) => {
   if (err) {
