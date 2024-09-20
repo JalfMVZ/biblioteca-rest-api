@@ -1,15 +1,14 @@
 {
   "name": "biblioteca-virtual-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node src/app.js",
-    "dev": "ts-node-dev --respawn src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "start": "node --experimental-specifier-resolution=node dist/index.js",
+    "build": "tsc -p ./tsconfig.json --outDir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -38,5 +37,8 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.2"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0 <21.0.0"
+  }
 }
