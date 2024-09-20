@@ -9,7 +9,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://biblioteca-rest-api.onrender.com",
         description: "Servidor local",
       },
     ],
